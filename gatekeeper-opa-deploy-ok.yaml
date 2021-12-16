@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: gatekeeper-opa-deploy-ok
+  labels:
+    contact: "Luis-Merino-Tron"        
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gatekeeper-opa-deploy-ok
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gatekeeper-opa-deploy-ok
+    spec:
+      containers:
+      - image: nginx
+        name: nginx

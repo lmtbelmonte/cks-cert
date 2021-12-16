@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: gatekeeper-opa-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gatekeeper-opa-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gatekeeper-opa-deploy
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
