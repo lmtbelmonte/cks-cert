@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dockerhub-image
+spec:
+  restartPolicy: Never      
+  containers:
+  - name: dockerhub-image
+    image: docker.io/library/busybox
+    command: ['sh','-c','sleep 3600']    
